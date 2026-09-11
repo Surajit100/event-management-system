@@ -2,7 +2,10 @@ const express = require("express");
 const cors = require("cors");
 require("dotenv").config();
 
-const { connectDatabase } = require("./config/database");
+const { sequelize, connectDatabase } = require("./config/database");
+
+// Load models and relationships
+require("./models");
 
 // Routes
 const authRoutes = require("./routes/authRoutes");
@@ -36,16 +39,14 @@ const startServer = async () => {
   try {
     await connectDatabase();
 
-    app.listen(PORT, () => {
-      console.log(
-        `Sequelize server running on http://localhost:${PORT}`
-      );
+    // Create database tables from Sequelize models
+    await sequelize.sync();
+
+    app.listen(PORT, "0.0.0.0", () => {
+      console.log(`Sequelize server running on port ${PORT}`);
     });
   } catch (error) {
-    console.error(
-      "Failed to start server:",
-      error.message
-    );
+    console.error("Failed to start server:", error.message);
 
     process.exit(1);
   }
