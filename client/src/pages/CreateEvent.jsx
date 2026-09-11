@@ -43,7 +43,7 @@ function CreateEvent() {
       setSuccess("");
 
       const response = await fetch(
-        "http://localhost:5000/api/events",
+        "https://event-management-system-production-8cd2.up.railway.app/api/events",
         {
           method: "POST",
           headers: {

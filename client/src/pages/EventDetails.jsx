@@ -31,7 +31,7 @@ function EventDetails() {
         setError("");
 
         const response = await fetch(
-          `http://localhost:5000/api/events/${id}`
+          `https://event-management-system-production-8cd2.up.railway.app/api/events/${id}`
         );
 
         const data = await response.json();
@@ -71,7 +71,7 @@ function EventDetails() {
       setError("");
 
       const response = await fetch(
-        "http://localhost:5000/api/registrations",
+        "https://event-management-system-production-8cd2.up.railway.app/api/registrations",
         {
           method: "POST",
           headers: {
@@ -133,7 +133,7 @@ function EventDetails() {
       setMessage("");
 
       const response = await fetch(
-        `http://localhost:5000/api/events/${id}`,
+        `https://event-management-system-production-8cd2.up.railway.app/api/events/${id}`,
         {
           method: "DELETE",
           headers: {

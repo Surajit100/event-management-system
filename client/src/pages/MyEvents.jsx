@@ -17,7 +17,7 @@ function MyEvents() {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/registrations/my",
+        "https://event-management-system-production-8cd2.up.railway.app/api/registrations/my",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -54,7 +54,7 @@ function MyEvents() {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/registrations/${eventId}`,
+        `https://event-management-system-production-8cd2.up.railway.app/api/registrations/${eventId}`,
         {
           method: "DELETE",
           headers: {

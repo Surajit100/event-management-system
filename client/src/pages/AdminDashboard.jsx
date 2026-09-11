@@ -46,7 +46,7 @@ function AdminDashboard() {
         const token = localStorage.getItem("token");
 
         const response = await fetch(
-          "http://localhost:5000/api/events"
+          "https://event-management-system-production-8cd2.up.railway.app/api/events"
         );
 
         const data = await response.json();
@@ -79,7 +79,7 @@ function AdminDashboard() {
         }
 
         const response = await fetch(
-          "http://localhost:5000/api/admin/registrations",
+          "https://event-management-system-production-8cd2.up.railway.app/api/admin/registrations",
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -122,7 +122,7 @@ function AdminDashboard() {
       const token = localStorage.getItem("token");
 
       const response = await fetch(
-        `http://localhost:5000/api/events/${eventId}`,
+        `https://event-management-system-production-8cd2.up.railway.app/api/events/${eventId}`,
         {
           method: "DELETE",
           headers: {

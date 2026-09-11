@@ -23,7 +23,7 @@ function EditEvent() {
     const fetchEvent = async () => {
       try {
         const response = await fetch(
-          `http://localhost:5000/api/events/${id}`
+          `https://event-management-system-production-8cd2.up.railway.app/api/events/${id}`
         );
 
         const data = await response.json();
@@ -79,7 +79,7 @@ function EditEvent() {
       setError("");
 
       const response = await fetch(
-        `http://localhost:5000/api/events/${id}`,
+        `https://event-management-system-production-8cd2.up.railway.app/api/events/${id}`,
         {
           method: "PUT",
           headers: {
