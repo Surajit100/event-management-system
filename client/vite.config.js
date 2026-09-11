@@ -15,8 +15,6 @@ export default defineConfig({
   plugins: [react(), tailwindcss()],
 
   preview: {
-    allowedHosts: [
-      "event-management-system-production-8cd2.up.railway.app",
-    ],
+    allowedHosts: true,
   },
 });
