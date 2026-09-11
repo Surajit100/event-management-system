@@ -16,7 +16,7 @@ export default defineConfig({
 
   preview: {
     allowedHosts: [
-      "respectful-flexibility-production-b12f.up.railway.app",
+      "event-management-system-production-8cd2.up.railway.app",
     ],
   },
 });
